@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -46,6 +47,24 @@ public class NewTestAlerts {
 	  File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot1, new File("F:\\Study\\Screenshots\\demoQAAlerts\\alert1.png"));
 	  
+	  //Selecting frame sub menu
+	  JavascriptExecutor Js = (JavascriptExecutor) driver;
+	  Js.executeScript("window.scrollBy(0,400)");
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.findElement(By.xpath("(//li[@id='item-2'])[2]")).click();
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  int size = driver.findElements(By.tagName("iframe")).size();
+	  System.out.println(size);
+	  driver.switchTo().frame("frame1");
+	  String iFrameText1 = driver.findElement(By.id("sampleHeading")).getText();
+	  System.out.println(iFrameText1);
+	  driver.switchTo().defaultContent();
+	  driver.switchTo().frame("frame2");
+	  String iFrameText2 = driver.findElement(By.id("sampleHeading")).getText();
+	  System.out.println(iFrameText2);
+	  driver.switchTo().defaultContent();
+	  JavascriptExecutor Js1 = (JavascriptExecutor) driver;
+	  Js1.executeScript("window.scrollBy(400,0)");
   }
   
   
