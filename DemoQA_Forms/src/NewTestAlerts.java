@@ -1,6 +1,7 @@
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
+import java.awt.Frame;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -65,6 +66,43 @@ public class NewTestAlerts {
 	  driver.switchTo().defaultContent();
 	  JavascriptExecutor Js1 = (JavascriptExecutor) driver;
 	  Js1.executeScript("window.scrollBy(400,0)");
+	  
+	  //Selecting Nested frame - Outer and inner frames
+	  /*driver.findElement(By.xpath("(//li[@id='item-3'])[2]"));
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.switchTo().frame("frame1");
+	  String parentText = driver.findElement(By.id("frame1")).getText();
+	  System.out.println(parentText);
+	  driver.switchTo().frame("Child Iframe");
+	  String childText = driver.findElement(By.id("Child Iframe")).getText();
+	  System.out.println(childText);
+	  driver.switchTo().parentFrame();
+	  driver.switchTo().defaultContent();*/
+	  
+	  //Model Dialogs 
+	  JavascriptExecutor Js2 = (JavascriptExecutor) driver;
+	  Js2.executeScript("window.scrollBy(0,500)");
+	  driver.findElement(By.xpath("(//li[@id='item-4'])[2]")).click();
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  //Small modal
+	  driver.findElement(By.id("showSmallModal")).click();
+	  driver.switchTo().activeElement().isDisplayed();
+	  String modal = driver.findElement(By.xpath("(//div[@class='modal-content']//div)[3]")).getText();
+	  System.out.println(modal);
+	  driver.findElement(By.id("closeSmallModal")).click();
+	  driver.switchTo().defaultContent();
+	  
+	  //Large Modal
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.findElement(By.id("showLargeModal")).click();
+	  driver.switchTo().activeElement();
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  System.out.println("______________________*****________________________");
+	  String LargeModal = driver.findElement(By.xpath("(//div[@class='modal-content']//div)[3]")).getText();
+	  System.out.println(LargeModal);
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.findElement(By.id("closeLargeModal")).click();
+	 
   }
   
   

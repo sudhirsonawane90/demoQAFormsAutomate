@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-03T19:34:10 IST" name="Default suite" finished-at="2021-06-03T19:34:55 IST" duration-ms="45225">
+  <suite started-at="2021-06-04T16:15:47 IST" name="Default suite" finished-at="2021-06-04T16:16:24 IST" duration-ms="37536">
     <groups>
     </groups>
-    <test started-at="2021-06-03T19:34:10 IST" name="Default test" finished-at="2021-06-03T19:34:55 IST" duration-ms="45225">
+    <test started-at="2021-06-04T16:15:47 IST" name="Default test" finished-at="2021-06-04T16:16:24 IST" duration-ms="37536">
       <class name="NewTestAlerts">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:NewTestAlerts@112f364d]" started-at="2021-06-03T19:34:10 IST" name="beforeClass" finished-at="2021-06-03T19:34:27 IST" duration-ms="17050" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:NewTestAlerts@362045c0]" started-at="2021-06-04T16:15:47 IST" name="beforeClass" finished-at="2021-06-04T16:15:55 IST" duration-ms="7797" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="f()[pri:0, instance:NewTestAlerts@112f364d]" started-at="2021-06-03T19:34:27 IST" name="f" finished-at="2021-06-03T19:34:54 IST" duration-ms="27233" status="PASS">
+        <test-method signature="f()[pri:0, instance:NewTestAlerts@362045c0]" started-at="2021-06-04T16:15:55 IST" name="f" finished-at="2021-06-04T16:16:23 IST" duration-ms="28751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:NewTestAlerts@112f364d]" started-at="2021-06-03T19:34:54 IST" name="afterClass" finished-at="2021-06-03T19:34:55 IST" duration-ms="878" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:NewTestAlerts@362045c0]" started-at="2021-06-04T16:16:24 IST" name="afterClass" finished-at="2021-06-04T16:16:24 IST" duration-ms="923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
